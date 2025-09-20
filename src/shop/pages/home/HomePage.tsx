@@ -1,3 +1,9 @@
+import CustomJumbotron from "@/shop/components/CustomJumbotron";
+
 export const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <CustomJumbotron title="Todos los productos" />
+    </>
+  );
 };
