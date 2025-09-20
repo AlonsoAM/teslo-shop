@@ -16,8 +16,10 @@ const ProductsGrid = ({ products }: Props) => {
 
   const viewMode = searchParams.get("viewMode") || "grid";
 
-  const handleViewModeChange = (mode: "grid" | "list") =>
-    setSearchParams({ viewMode: mode });
+  const handleViewModeChange = (mode: "grid" | "list") => {
+    searchParams.set("viewMode", mode);
+    setSearchParams(searchParams);
+  };
 
   return (
     <section className="py-12 px-4 lg:px-8">
